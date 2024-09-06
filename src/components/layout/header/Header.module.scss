@@ -1,0 +1,21 @@
+.Header {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo img {
+      height: 30px;
+    }
+    .search {
+    }
+    .auth button {
+      background-color: #1db954;
+      border: none;
+      border-radius: 20px;
+      color: #fff;
+      padding: 5px 15px;
+      cursor: pointer;
+      margin: 10px 0;
+    }
+  }
+}

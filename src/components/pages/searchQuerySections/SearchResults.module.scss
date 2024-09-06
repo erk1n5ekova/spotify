@@ -1,0 +1,24 @@
+.SearchResults {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    .track {
+      display: flex;
+      background-color: rgba(47, 48, 48, 0.21);
+      gap: 22px;
+      padding: 25px;
+      align-items: center;
+
+      img {
+        width: 150px;
+        height: 150px;
+      }
+      .traks_text {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}
