@@ -1,0 +1,25 @@
+.PlaylistId {
+  .content {
+    .tracks {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .track {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        background-color: rgba(100, 102, 103, 0.463);
+        border-radius: 10px;
+        &.active {
+          background: rgba(45, 205, 80, 0.73);
+        }
+      }
+      img {
+        width: 100px;
+        border-radius: 10px;
+        height: 100px;
+      }
+    }
+  }
+}

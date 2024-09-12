@@ -1,21 +1,100 @@
 .Header {
+  background-color: #000;
+
   .content {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
+
     .logo img {
-      height: 30px;
+      height: 40px;
     }
+
     .search {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .home_svg {
+        width: 45px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: #54505087;
+      }
     }
-    .auth button {
-      background-color: #1db954;
-      border: none;
-      border-radius: 20px;
-      color: #fff;
-      padding: 5px 15px;
-      cursor: pointer;
-      margin: 10px 0;
+
+    .auth {
+      display: flex;
+
+      .auth_info {
+        display: flex;
+        gap: 10px;
+      }
+
+      button {
+        background-color: #1db954;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        padding: 5px 15px;
+        cursor: pointer;
+        margin: 10px 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      padding: 15px 0;
+      gap: 10px;
+
+      .search {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .home_svg {
+          width: 40px;
+          height: 28px;
+        }
+      }
+
+      .auth {
+        // width: 100%;
+        justify-content: space-between;
+        .auth_info {
+          text-align: center;
+          justify-content: center;
+        }
+        button {
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .content {
+      padding: 10px 0;
+
+      .logo img {
+        height: 35px;
+      }
+
+      .search {
+        gap: 5px;
+
+        .home_svg {
+          width: 35px;
+          height: 25px;
+        }
+      }
+
+      .auth button {
+        padding: 4px 8px;
+      }
     }
   }
 }

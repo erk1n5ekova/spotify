@@ -6,8 +6,13 @@ import { useEffect } from "react";
 import axios from "axios";
 
 const Footer = () => {
-  const { accessToken, trackUris, trackIndex, setAccessToken } =
-    usePlayerStore();
+  const {
+    accessToken,
+    trackUris,
+    trackIndex,
+    setAccessToken,
+    setActiveTrackUri,
+  } = usePlayerStore();
 
   const getAccessToken = async () => {
     const { data } = await axios.get("/api/auth/get-access-token");
@@ -24,14 +29,19 @@ const Footer = () => {
           <SpotifyWebPlayer
             token={accessToken}
             offset={trackIndex!}
+            callback={(state) => {
+              if (state.isPlaying) {
+                setActiveTrackUri(state.track.uri);
+              }
+            }}
             uris={trackUris}
             styles={{
               activeColor: "#fff",
-              bgColor: " rgba(47, 48, 48, 0.21)",
+              bgColor: "#000",
               color: "#fff",
               loaderColor: "#fff",
               sliderColor: "#1cb954",
-              trackArtistColor: "#05043a",
+              trackArtistColor: "#fff",
               trackNameColor: "#fff",
             }}
           />

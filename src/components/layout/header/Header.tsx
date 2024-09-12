@@ -2,6 +2,7 @@
 import { useGetMeQuery } from "@/redux/api/me";
 import scss from "./Header.module.scss";
 import SearchTracks from "@/components/shared/SearchTracks";
+import { MdHomeFilled } from "react-icons/md";
 
 const Header = () => {
   const { data: session } = useGetMeQuery();
@@ -26,15 +27,17 @@ const Header = () => {
           <div className={scss.logo}>
             <img src="/images/logo.png" alt="" />
           </div>
+
           <div className={scss.search}>
+            <MdHomeFilled className={scss.home_svg} />
             <SearchTracks />
           </div>
           <div className={scss.auth}>
             {session ? (
               <>
-                <div>
+                <div className={scss.auth_info}>
                   <h1>{session.display_name}</h1>
-                  <p>{session.email}</p>
+                  {/* <p>{session.email}</p> */}
                   <button onClick={logout}>logout</button>
                 </div>
               </>

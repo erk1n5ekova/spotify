@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { DebounceInput } from "react-debounce-input";
+import { IoSearch } from "react-icons/io5";
 
 import scss from "./SearchTrack.module.scss";
 const SearchTracks = () => {
