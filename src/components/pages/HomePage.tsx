@@ -1,11 +1,11 @@
 import PlayList from "./homeSections/PlayList";
 
 const HomePage = () => {
-	return (
-		<>
-			<PlayList />
-		</>
-	);
+  return (
+    <>
+      <PlayList />
+    </>
+  );
 };
 
 export default HomePage;

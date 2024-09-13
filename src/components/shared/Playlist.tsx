@@ -10,14 +10,16 @@ const Playlist = () => {
     <div className={scss.Playlist}>
       <div className={scss.container}>
         <div className={scss.content}>
-          <div className={scss.name_track}>
+          <div className={scss.name_tracks}>
             {data?.items.map((item, index) => (
               <div
                 key={index}
+                className={scss.track}
                 onClick={() => {
                   router.push(`/playlist/${item.id}`);
                 }}
               >
+                <img src={item.images[0].url} alt="album" />
                 <h1>{item.name}</h1>
               </div>
             ))}
