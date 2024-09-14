@@ -2,8 +2,12 @@
   .container {
     height: 100%;
 
+    border-radius: 10px;
     .content {
       height: 100%;
+      @media screen and (max-width: 780px) {
+        display: none;
+      }
       .name_tracks {
         border-radius: 10px;
         background-color: rgba(47, 48, 48, 0.21);

@@ -1,10 +1,17 @@
 .PlaylistId {
+  background: linear-gradient(
+    180deg,
+    rgba(117, 162, 246, 0.513),
+    rgba(12, 12, 12, 0.215)
+  );
+  border-radius: 10px;
   .content {
     .tracks {
       display: flex;
       flex-direction: column;
       gap: 15px;
-
+      margin: 10px 0;
+      padding: 10px;
       .track {
         display: flex;
         gap: 15px;

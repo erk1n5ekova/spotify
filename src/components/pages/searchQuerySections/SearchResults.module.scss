@@ -1,7 +1,13 @@
 .SearchResults {
-  margin: 10px 0;
+  margin: 10px;
   .container {
     .content {
+      border-radius: 10px;
+      background: linear-gradient(
+        180deg,
+        rgba(229, 83, 127, 0.433),
+        rgba(12, 12, 12, 0.004)
+      );
       @media (max-width: 768px) {
         padding: 0 16px;
       }
@@ -10,7 +16,6 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        background-color: rgba(47, 48, 48, 0.21);
         border-radius: 20px;
       }
 
@@ -22,17 +27,18 @@
         text-align: center;
 
         img {
-          width: 80px;
+          max-width: 80px;
           height: 80px;
+          border-radius: 10px;
 
           @media (max-width: 768px) {
-            width: 50px;
-            height: 50px;
+            max-width: 130px;
+            height: 130px;
           }
 
           @media (min-width: 1024px) {
-            width: 100px;
-            height: 100px;
+            max-width: 150px;
+            height: 150px;
           }
         }
 
@@ -54,7 +60,7 @@
       flex-direction: column;
 
       img {
-        width: 150px;
+        max-width: 150px;
         height: 150px;
       }
     }

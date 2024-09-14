@@ -1,0 +1,17 @@
+.PlaylistShows {
+  .content {
+    .name_shows {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 10px;
+      padding: 20px 0;
+      .show {
+        img {
+          width: 200px;
+          height: 200px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

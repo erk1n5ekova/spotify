@@ -1,0 +1,28 @@
+.PlailistCategories {
+  .content {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    margin: 10px 0;
+    @media screen and (max-width: 1650px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 1059px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 856px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .category img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+    }
+  }
+}

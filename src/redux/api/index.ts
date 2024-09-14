@@ -26,6 +26,16 @@ export const api = createApi({
   baseQuery: baseQueryExtended,
   refetchOnFocus: true,
   refetchOnReconnect: true,
-  tagTypes: ["me", "search", "playlist", "artists", "recommendations", "shows"],
+  tagTypes: [
+    "me",
+    "search",
+    "playlist",
+    "recommendations",
+    "shows",
+    "releases",
+    "albums",
+    "like",
+    "categories",
+  ],
   endpoints: () => ({}),
 });

@@ -3,16 +3,37 @@
     margin: 10px 0;
     background: linear-gradient(
       180deg,
-      rgba(144, 148, 148, 0.611),
+      rgba(144, 148, 148, 0.433),
       rgba(12, 12, 12, 0.004)
     );
     padding: 10px;
     border-radius: 10px;
     .name_tracks {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(6, 1fr);
       gap: 10px;
       padding: 20px 0;
+      @media screen and (max-width: 1686px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @media screen and (max-width: 1309px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media screen and (max-width: 1099px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+      }
+      @media screen and (max-width: 869px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
       .track {
         img {
           width: 200px;
